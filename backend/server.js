@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import passport from "./config/passport.js";
 import authRoutes from "./routes/authRoutes.js";
+import resumeRoutes from "./routes/resumeRoutes.js";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(cookieParser());
 app.use(passport.initialize());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/resume", resumeRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)

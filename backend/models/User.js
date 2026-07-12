@@ -5,12 +5,20 @@ const userSchema = new mongoose.Schema(
     googleId: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     name: String,
+    currentTitle: String,
     avatar: String,
     profile: {
       skills: [String],
-      experience: String,
+      experience: [
+        {
+          company: String,
+          role: String,
+          duration: String,
+          description: String,
+        },
+      ],
       education: String,
-      projects: [String],
+      projects: [{ name: String, techStack: String, description: String }],
       rawResumeText: String,
     },
   },
