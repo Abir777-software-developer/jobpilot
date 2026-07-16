@@ -7,6 +7,7 @@ import cors from "cors";
 import passport from "./config/passport.js";
 import authRoutes from "./routes/authRoutes.js";
 import resumeRoutes from "./routes/resumeRoutes.js";
+import jobRoutes from "./routes/jobRoutes.js";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(passport.initialize());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/resume", resumeRoutes);
+app.use("/api/jobs", jobRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)

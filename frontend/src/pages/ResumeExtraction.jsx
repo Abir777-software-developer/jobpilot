@@ -139,6 +139,7 @@ export default function ResumeExtraction() {
         rawText,
       });
       await refetchUser();
+      await api.post("/jobs/refresh-matches");
       navigate("/job-matches");
       setHasNewUpload(false);
     } catch (err) {
@@ -473,7 +474,7 @@ export default function ResumeExtraction() {
               disabled={saving || !hasNewUpload}
               className="bg-primary-container text-on-primary px-10 py-2.5 rounded-lg font-label-md shadow-sm transition-all hover:opacity-90 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {saving ? "Saving..." : "Finish"}
+              {saving ? "Finding matching jobs..." : "Finish"}
             </button>
           </div>
         </section>
