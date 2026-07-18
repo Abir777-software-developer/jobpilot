@@ -4,6 +4,7 @@ import {
   googleCallback,
   logout,
   getMe,
+  markTutorialSeen,
 } from "../controllers/authController.js";
 import protect from "../middleware/auth.js";
 
@@ -25,7 +26,7 @@ router.get(
   }),
   googleCallback,
 );
-
+router.post("/tutorial-seen", protect, markTutorialSeen);
 router.post("/logout", logout);
 router.get("/me", protect, getMe);
 

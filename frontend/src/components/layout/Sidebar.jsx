@@ -9,7 +9,7 @@ const navItems = [
     path: "/cover-letter-review",
     icon: "edit_note",
   },
-  { name: "Applications", path: "/", icon: "description" },
+  { name: "Applications", path: "/dashboard", icon: "description" },
   { name: "Settings", path: "/settings", icon: "settings" },
 ];
 

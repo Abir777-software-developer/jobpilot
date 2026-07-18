@@ -5,7 +5,9 @@ const userSchema = new mongoose.Schema(
     googleId: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     name: String,
+
     currentTitle: String,
+    hasSeenTutorial: { type: Boolean, default: false },
     avatar: String,
     profile: {
       skills: [String],

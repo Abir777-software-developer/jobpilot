@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export default function Login() {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
@@ -72,49 +71,23 @@ export default function Login() {
               </svg>
               Continue with Google
             </button>
-
-            <div className="relative flex items-center py-sm">
-              <div className="flex-grow border-t border-outline-variant/30"></div>
-              <span className="flex-shrink mx-md font-label-sm text-label-sm text-outline uppercase tracking-widest">
-                or
-              </span>
-              <div className="flex-grow border-t border-outline-variant/30"></div>
-            </div>
-
-            <div className="space-y-base">
-              <label className="block font-label-sm text-label-sm text-on-surface-variant ml-xs">
-                Professional Email
-              </label>
-              <input
-                className="w-full h-12 px-md bg-white border border-outline-variant/40 rounded-lg focus:ring-0 focus:border-primary transition-colors outline-none font-body-md text-body-md text-on-surface"
-                placeholder="name@company.com"
-                type="email"
-              />
-            </div>
-
-            <Link
-              to="/"
-              className="w-full h-12 flex items-center justify-center border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-surface-container transition-colors duration-200"
-            >
-              Sign in with email
-            </Link>
           </div>
 
           <div className="mt-lg pt-md border-t border-outline-variant/10 text-center">
             <p className="font-label-sm text-label-sm text-on-surface-variant">
-              Don't have an account?{" "}
-              <a className="text-primary font-bold hover:underline" href="#">
-                Request early access
-              </a>
+              By continuing, you agree to let JobPilot access your basic Google
+              profile information.
             </p>
           </div>
         </section>
 
         <div className="mt-xl flex flex-col items-center gap-md">
-          <div className="w-full h-32 rounded-xl bg-surface-variant overflow-hidden organic-shadow relative flex items-center justify-center">
-            <span className="material-symbols-outlined text-outline text-[48px] opacity-20">
-              landscape
-            </span>
+          <div className="w-full h-32 rounded-xl overflow-hidden organic-shadow relative">
+            <img
+              src="/login-illus.jpeg"
+              alt="JobPilot illustration"
+              className="w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
           </div>
           <div className="flex gap-lg items-center text-outline">

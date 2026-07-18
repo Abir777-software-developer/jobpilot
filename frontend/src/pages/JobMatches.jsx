@@ -38,7 +38,7 @@ export default function JobMatches() {
   };
 
   const handleGenerateCoverLetter = (jobId) => {
-    navigate(`/cover-letter-review?jobId=${jobId}`);
+    navigate(`/cover-letter-review?jobId=${jobId}&mode=initial`);
   };
 
   if (loading) {

@@ -8,6 +8,8 @@ import passport from "./config/passport.js";
 import authRoutes from "./routes/authRoutes.js";
 import resumeRoutes from "./routes/resumeRoutes.js";
 import jobRoutes from "./routes/jobRoutes.js";
+import coverLetterRoutes from "./routes/coverLetterRoutes.js";
+import applicationRoutes from "./routes/applicationRoutes.js";
 
 const app = express();
 
@@ -19,6 +21,8 @@ app.use(passport.initialize());
 app.use("/api/auth", authRoutes);
 app.use("/api/resume", resumeRoutes);
 app.use("/api/jobs", jobRoutes);
+app.use("/api/coverletter", coverLetterRoutes);
+app.use("/api/applications", applicationRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
