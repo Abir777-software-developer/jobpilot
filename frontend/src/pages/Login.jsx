@@ -42,8 +42,11 @@ export default function Login() {
         >
           <div className="space-y-md">
             <button
+              // onClick={() =>
+              //   (window.location.href = "http://localhost:5000/api/auth/google")
+              // }
               onClick={() =>
-                (window.location.href = "http://localhost:5000/api/auth/google")
+                (window.location.href = `${import.meta.env.VITE_API_URL}/auth/google`)
               }
               className="w-full h-14 bg-primary-container text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-sm transition-all duration-300 hover:opacity-90 active:scale-[0.98]"
             >
